@@ -4,7 +4,7 @@ const shortid = require('shortid');
 exports.createShortUrl = async (req, res) => {
   let { longUrl } = req.body;
   if (!longUrl) {
-    res.status(400).json({ error: 'Bruh URL toh daal' });
+    res.status(400).json({ error: "Well, well, well, look who's trying to shorten a URL without actually providing one!" });
     return;
   }
   if (!longUrl.startsWith('http://') && !longUrl.startsWith('https://')) {
